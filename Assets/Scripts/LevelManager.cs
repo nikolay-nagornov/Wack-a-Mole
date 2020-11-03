@@ -81,6 +81,8 @@ public class LevelManager : MonoBehaviour
         Vector3 camOffset = Camera.main.transform.position - spawningPoints[0].position;
         Camera.main.transform.position = spawningPoints[curSpawningPointIndex].position + camOffset;
         PlayerPrefs.SetInt("SpawningPointIndex", curSpawningPointIndex);
+
+        Application.targetFrameRate = 60;
     }
 
     void Start()
